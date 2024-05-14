@@ -10,6 +10,7 @@ running = True
 dt = 0
 
 player_pos = pygame.Vector2(screen.get_width() / 2, screen.get_height() / 2)
+car1 = car.Car(screen, "blue", player_pos)
 
 while running:
     # poll for events
@@ -21,7 +22,7 @@ while running:
     # fill the screen with a color to wipe away anything from last frame
     screen.fill("purple")
 
-    car.move_car(screen, "red", player_pos, 40, dt)
+    car1.move_car(dt)
     # pygame.draw.circle(screen, "red", player_pos, 40)
 
     # flip() the display to put your work on screen
